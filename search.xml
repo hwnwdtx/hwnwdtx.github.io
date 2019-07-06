@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[跨域问题及解决方案]]></title>
+    <url>%2F2019%2F07%2F06%2F%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[在工作的过程中，发现大家对浏览器的跨域问题不是很了解，下面就讲讲什么是跨域，以及怎么解决这个问题。 同源策略什么是同源策略同源策略是浏览器的一个安全功能，不同源的的js脚本在没有明确授权的情况下，不能读写对方的资源。即： a.com下的js文件通过ajax访问b.com下的文件或数据时就会报错。 什么是 —— 源“源” 即使资源的来源。在浏览器看来：协议、域名和端口号均相同则属于同源。 跨域问题什么是跨域受到浏览器的同源策略影响，不同源的脚本不能操作其他源下面的文件和数据。但在某些场合，我们的程序必需要实现操作不同源下面的对象，这就是跨域。 跨域的解决方案关于跨域的解决方案有很多，在这里不多展开。主要例举如下两种方案： 1) 转 “不同源” 为 “同源”既然浏览器的同源策略限制了我们访问其他源下的对象，那么我们可以转变思路，让两个不同源的js处于同一个源下面。而我们正好可以通过nginx的反向代理实现这样一种转换。 配置文件：/home/hsiar/hsiar-green.el7/conf/nginx.conf 123456789101112131415server &#123; listen 8088; http_t2; satisfy all; ... #加上如下配置 location /frame &#123; proxy_pass http://127.0.0.1:9911; &#125; location / &#123; ... &#125;&#125; 如上所示，hsiar启动了一个服务，在8088端口上进行监听。当匹配到 ‘/frame’ 开头的请求时，将其代理转发到 http://127.0.0.1:9911 上的服务进行处理。 这样，我们访问http://127.0.0.1:8088/frame 和访问http://127.0.0.1:9911/frame 一样了，从而实现了化 “不同源” 为 “同源”。 2) 明确允许其他源访问当前源的对象前面提到，在没有明确授权的情况下不能访问其他源的对象。所以，只需要对需要访问当前源的其他源进行授权，就可以使对方名正言顺的访问当前源的对象。hsiar 可以通过配置的方式，进行这种授权。 配置文件：/home/hsiar/hsiar-green.el7/conf/cross-domain-map.conf 123456map $http_origin $corsHost &#123; default $host; &quot;~http://localhost:8080&quot; http://localhost:8080; &quot;~http://localhost:8092&quot; http://localhost:8092; &quot;~http://192.168.125.53:8080&quot; http://192.168.125.53:8080;&#125; 只需参照如上配置进行设置，即可。]]></content>
+      <categories>
+        <category>hsiar</category>
+      </categories>
+      <tags>
+        <tag>跨域</tag>
+        <tag>hsiar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo史上最全搭建教程]]></title>
+    <url>%2F2019%2F07%2F06%2Fhexo%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[现在市面上的博客很多，如CSDN，博客园，简书等平台，可以直接在上面发表，用户交互做的好，写的文章百度也能搜索的到。缺点是比较不自由，会受到平台的各种限制和恶心的广告。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[为什么用hexo代替jekyll]]></title>
+    <url>%2F2019%2F07%2F06%2F%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8hexo%E4%BB%A3%E6%9B%BFjekyll%2F</url>
+    <content type="text"><![CDATA[最近想要搞个个人博客，因为不想自己搞站点，所以找到了github pages，它提供给我们域名和空间，多省事啊。那静态页面用什么工具呢？一开始我用的是jekyll,然后我有了那句经典的感受，那句话是从入门到放弃，啊，多么痛的领悟！]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[测试文章]]></title>
+    <url>%2F2019%2F07%2F06%2Ftest%2F</url>
+    <content type="text"><![CDATA[this is a test article]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F07%2F06%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[欢迎使用 Hexo! 这是你的首次递交。 你可以通过查看 文档 来获取更多的信息. 在使用Hexo的过程中，用到任何的问题都可以在troubleshooting中找到解决方法。当然你也可以直接通过GitHub来询问我。 Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+  </entry>
+</search>
