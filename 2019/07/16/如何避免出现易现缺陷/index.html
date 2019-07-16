@@ -92,13 +92,17 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="贺文能的个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/hsiar/index.html">
+  <meta name="description" content="…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何避免出现易现缺陷">
+<meta property="og:url" content="http://yoursite.com/2019/07/16/如何避免出现易现缺陷/index.html">
 <meta property="og:site_name" content="贺文能的个人博客">
+<meta property="og:description" content="…">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-16T06:00:56.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="贺文能的个人博客">
+<meta name="twitter:title" content="如何避免出现易现缺陷">
+<meta name="twitter:description" content="…">
 
 
 
@@ -106,7 +110,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/hsiar/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/16/如何避免出现易现缺陷/">
 
 
 
@@ -116,7 +120,7 @@
   };
 </script>
 
-  <title>标签: hsiar | 贺文能的个人博客</title>
+  <title>如何避免出现易现缺陷 | 贺文能的个人博客</title>
   
 
 
@@ -164,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,7 +238,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -278,25 +282,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -343,57 +328,188 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>hsiar<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/如何避免出现易现缺陷/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="贺文能">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/wending.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺文能的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/06/跨域问题及解决方案/" itemprop="url">
-            
-              <span itemprop="name">跨域问题及解决方案</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">如何避免出现易现缺陷
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-06T14:28:51+08:00" content="2019-07-06">
-          07-06
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
 
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-16 12:24:51 / 修改时间：14:00:56" itemprop="dateCreated datePublished" datetime="2019-07-16T12:24:51+08:00">2019-07-16</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>…</p>
+<a id="more"></a>
+
+<h3 id="谨慎使用自动生成的-updateById-方法"><a href="#谨慎使用自动生成的-updateById-方法" class="headerlink" title="谨慎使用自动生成的 updateById 方法"></a>谨慎使用自动生成的 updateById 方法</h3><p>当我们需要完整更新一条记录时，避免使用自动生成的updateById方法。该方法只会修改字段值不为<code>&#39;&#39;</code>或<code>null</code>的字段。<br>其实现如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">sql</span> <span class="attr">id</span>=<span class="string">"Update_Clause"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"subDicName != null"</span>&gt;</span></span><br><span class="line">        sub_dic_name = #&#123;subDicName,jdbcType=VARCHAR&#125;,</span><br><span class="line">      <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"reserve1 != null"</span>&gt;</span></span><br><span class="line">        reserve1 = #&#123;reserve1,jdbcType=VARCHAR&#125;,</span><br><span class="line">      <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"reserve2 != null"</span>&gt;</span></span><br><span class="line">        reserve2 = #&#123;reserve2,jdbcType=VARCHAR&#125;,</span><br><span class="line">      <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"csCacheFlag != null"</span>&gt;</span></span><br><span class="line">        cs_cache_flag = #&#123;csCacheFlag,jdbcType=CHAR&#125;,</span><br><span class="line">      <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">sql</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateById"</span> <span class="attr">parameterType</span>=<span class="string">"com.hundsun.cmc.manager.domain.entity.HgDictionary"</span>&gt;</span></span><br><span class="line">    update hg_tdictionary</span><br><span class="line">    <span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">"Update_Clause"</span> /&gt;</span></span><br><span class="line">    where dic_no = #&#123;dicNo,jdbcType=INTEGER&#125;</span><br><span class="line">      and sub_dic_no = #&#123;subDicNo,jdbcType=VARCHAR&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="新增接口时明确是否需要支持事务"><a href="#新增接口时明确是否需要支持事务" class="headerlink" title="新增接口时明确是否需要支持事务"></a>新增接口时明确是否需要支持事务</h3><p>事务是保持数据一致性的一个重要手段。我们系统采用的是注解式事务的方式，需要在接口上加上<code>@Transactional</code>注解来实现对事务的支持。</p>
+<p>没有事务的接口在自测阶段很难被发现，所以需要将问题的根源消灭在开发阶段。每新增一个接口时，都要问自己一遍：在这个接口中是否有对数据库进行增删改操作，是否需要加<code>@Transactional</code>注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@Transactional</span>(rollbackFor = Exception.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> ApiResult <span class="title">modify</span><span class="params">(Model mode)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> ok();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用接口服务时注意手动回滚事务"><a href="#调用接口服务时注意手动回滚事务" class="headerlink" title="调用接口服务时注意手动回滚事务"></a>调用接口服务时注意手动回滚事务</h3><p>在服务内部执行出错时，会产生一个异常，spring框架会自动帮我们回滚事务。但调用接口服务时，服务只会返回报错码和报错信息， 当报错码不为0时，我们需要手工抛出异常来触发事务回滚或者通过代码显式回滚。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@Transactional</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ApiResult <span class="title">modifyFundInfo</span><span class="params">(HgFundInfoModel model)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//修改产品分组信息</span></span><br><span class="line">    ApiResult apiResult = fundGroupService.modifyFundGroupDetail(model.getFundId(), model.getFundGroupIdList());</span><br><span class="line">    <span class="keyword">if</span> (apiResult.getErrorNo() != <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> CmcBaseException(apiResult.getErrorNo(), apiResult.getErrorInfo());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//修改合规产品信息</span></span><br><span class="line">    fundRiskSettingManager.modifyHgFundInfo(model);</span><br><span class="line">    <span class="keyword">return</span> ok();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用foreach标签拼接-SQL-时入参为null或-39-39-时造成SQL语法错误"><a href="#使用foreach标签拼接-SQL-时入参为null或-39-39-时造成SQL语法错误" class="headerlink" title="使用foreach标签拼接 SQL 时入参为null或&#39;&#39;时造成SQL语法错误"></a>使用<code>foreach</code>标签拼接 SQL 时入参为<code>null</code>或<code>&#39;&#39;</code>时造成SQL语法错误</h3><p>当入参为’’时，mybatis会生成如下的错误SQL</p>
 
       
     </div>
 
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/13/我的application-properties配置/" rel="next" title="我的application.properties配置">
+                <i class="fa fa-chevron-left"></i> 我的application.properties配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -413,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -538,6 +663,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#谨慎使用自动生成的-updateById-方法"><span class="nav-text">谨慎使用自动生成的 updateById 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新增接口时明确是否需要支持事务"><span class="nav-text">新增接口时明确是否需要支持事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用接口服务时注意手动回滚事务"><span class="nav-text">调用接口服务时注意手动回滚事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用foreach标签拼接-SQL-时入参为null或-39-39-时造成SQL语法错误"><span class="nav-text">使用foreach标签拼接 SQL 时入参为null或&#39;&#39;时造成SQL语法错误</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -663,6 +805,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   
 
@@ -678,6 +824,8 @@
 
   
 
+
+  
 
 
   
